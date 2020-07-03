@@ -11,8 +11,8 @@ function App() {
           alt ="logo"/>
       <span>Chat Central</span>
     </header>
-    <h1>Johnathan</h1>
-    {/* <!--<Message />--> */}
+    {/* <h1>Johnathan</h1>
+    <!--<Message />--> */}
     <Footer />
     </main>
   );

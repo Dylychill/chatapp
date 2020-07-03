@@ -8,7 +8,7 @@ function Footer(){
           onChange={e=> setText(e.target.value)}
           placeholder="Type your message"
         />
-        <button></button>
+        <button>↑</button>
       </footer>)
 }
 
