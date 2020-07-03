@@ -1,5 +1,6 @@
 import React from 'react';
 import Footer from './footer'
+import Message from './message'
 import './App.css';
 
 function App() {
@@ -10,9 +11,8 @@ function App() {
           alt ="logo"/>
       <span>Chat Central</span>
     </header>
-    <article>
-      <h1>Johnathan</h1>
-    </article>
+    <h1>Johnathan</h1>
+    {/* <!--<Message />--> */}
     <Footer />
     </main>
   );
