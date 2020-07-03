@@ -21,7 +21,7 @@ body {
 .main {
   display: flex;
   flex:1;
-  flex-direction:column;
+  flex-direction: column;
   justify-content: space-between;
   width: 100%;
 }
@@ -34,6 +34,7 @@ header {
   width: 100%;
   border-bottom: 1px solid white;
   justify-content: center;
+  font-size: 12px;
 }
 
 header img {
@@ -75,6 +76,29 @@ button {
   align-items: center;
 }
 
-.message {
-  color: white;
+.full-message .sender {
+  font-size: 8px;
+  opacity: 0.9;
+  margin-bottom: 2px;
+}
+
+.full-message .text {
+  background: #D7DDE8;
+  /* display: inline; */
+  padding: 2px 5px;
+  border-radius: 8px;
+  font-size: 10px;
+  margin-left: 3px;
+}
+
+.full-message {
+  color: black;
+  margin-left: 3px;
+  margin-top: 10px;
+  width: 90%;
+}
+
+.message-container {
+  height: 100%;
+  margin-top: 10px;
 }
