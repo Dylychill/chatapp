@@ -101,4 +101,9 @@ button {
 .message-container {
   height: 100%;
   margin-top: 10px;
+  /* Allows scroll functionality below */
+  overflow-y: scroll;
+  display: flex;
+  flex:1;
+  flex-direction: column-reverse;
 }
