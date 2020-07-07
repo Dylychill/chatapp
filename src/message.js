@@ -1,9 +1,11 @@
 import React, {useState} from 'react'
 
-function Message(){
-    return <div class="full-message">
-        <div class="sender">sender</div>
-        <div class="text">message here for you ttyl brb</div>
+function Message(props){
+    return <div className="full-message">
+        <div className="sender">sender</div>
+        <div className="text">
+            {props.text}
+        </div>
     </div>
 
 }
