@@ -8,7 +8,7 @@ function Footer(props){
           onChange={e=> setText(e.target.value)}
           placeholder="Type your message"
           onKeyPress = {e=> {
-            if (e.key==="Enter") {
+            if (e.key==="Enter" && text) { //check exists
               props.onSend(text)
               setText("")
               // onKeyPress is like enter on the keyboard
@@ -17,8 +17,10 @@ function Footer(props){
         />
         <button
           onClick = {() => {
-            props.onSend(text)
-            setText("")
+            if (text) { // only sends if there's content
+              props.onSend(text)
+              setText("")
+            }
           }}
         >↑</button>
 
