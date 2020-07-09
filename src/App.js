@@ -1,6 +1,7 @@
-import React, {useEffect} from 'react';
+import React, {useEffect, useState} from 'react';
 import Footer from './footer'
 import Message from './message'
+import NamePicker from './namePicker.js'
 import './App.css';
 import {initialize, useDatu} from 'datu'
 import {BrowserRouter, Switch, Route} from 'react-router-dom'
@@ -25,16 +26,21 @@ function Room(props) {
   // below is a hook from Evan's library
   const room = props.match.params.room
   const {messages, send} = useDatu(room)
+
+  const [name, setName] = useState('')
   return (
     <main className="main">
     <header>
-      <img src="https://cdn3.iconfinder.com/data/icons/galaxy-open-line-gradient-ii/200/chat-512.png"
-          alt ="logo"/>
-      <span>Chat Central</span>
+      <div className="logo">
+        <img src="https://cdn3.iconfinder.com/data/icons/galaxy-open-line-gradient-ii/200/chat-512.png"
+            alt ="logo"/>
+        <span>Chat Central</span>
+      </div>
+      <NamePicker onSend={(editName) => setName({editName})}/>
     </header>
 
     <div className = "message-container">
-      {messages.map((m, i) => <Message key={i} text={m.text} />)}
+      {messages.map((m, i) => <Message key={i} text={m.text} username={name}/>)}
     </div>
 
     <Footer
