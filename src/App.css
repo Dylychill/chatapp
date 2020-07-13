@@ -113,12 +113,13 @@ footer button {
 
 .name-input {
   width: 40%;
+  position: relative;
+  /* to make the button be inside, be relative position */
 }
 
 .name-input button {
-  color:blue;
-  top: 4px;
-  right: 6px;
+  top: 7px;
+  right: -2px;
 }
 
 .logo {

@@ -15,7 +15,10 @@ function NamePicker(props) {
             }
           }}
         >OK</button>
-
+        {/* Current state of this file changes every name for every message based on new input
+        I haven't tested with other users, so right now it is accurate enough. Does the messages database
+        have space for names?
+         */}
     </div>
 }
 export default NamePicker
