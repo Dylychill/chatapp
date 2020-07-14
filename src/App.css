@@ -97,8 +97,10 @@ footer button {
 .full-message {
   color: black;
   margin-left: 3px;
-  margin-top: 10px;
+  margin-top: 7px;
+  margin-bottom: 3px;
   width: 90%;
+  display: flex;
 }
 
 .message-container {

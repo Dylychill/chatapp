@@ -23,7 +23,6 @@ function App() {
 
 // an individual room
 function Room(props) {
-  // below is a hook from Evan's library
   const room = props.match.params.room
   const {messages, send} = useDatu(room)
 
@@ -41,7 +40,7 @@ function Room(props) {
     </header>
 
     <div className = "message-container">
-      {messages.map((m, i) => <Message key={i} text={m.text} username={m.name} />)}
+      {messages.map((m, i) => <Message key={i} text={m.text} username={m.name} isMe={m.name===name}/>)}
     </div>
 
     <Footer
