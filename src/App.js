@@ -26,7 +26,6 @@ function Room(props) {
   // below is a hook from Evan's library
   const room = props.match.params.room
   const {messages, send} = useDatu(room)
-
   const [name, setName] = useState('')
   return (
     <main className="main">
@@ -40,11 +39,11 @@ function Room(props) {
     </header>
 
     <div className = "message-container">
-      {messages.map((m, i) => <Message key={i} text={m.text} username={name}/>)}
+      {messages.map((m, i) => <Message key={i} text={m.text} username={m.name}/>)}
     </div>
 
     <Footer
-      onSend={(text) => send({text:text, room})}
+      onSend={(text) => send({text, room, name})}
       // Room data is attached to each message
     />
     </main>

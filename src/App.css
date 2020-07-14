@@ -33,7 +33,7 @@ header {
   align-items: center;
   width: 100%;
   border-bottom: 1px solid white;
-  justify-content: space-around;
+  justify-content: space-between;
   font-size: 12px;
 }
 
@@ -114,15 +114,22 @@ footer button {
 .name-input {
   width: 40%;
   position: relative;
+  display: flex;
   /* to make the button be inside, be relative position */
 }
 
 .name-input button {
   top: 7px;
-  right: -2px;
+  right: 4px;
 }
 
 .logo {
   display: flex;
   align-items: center;
+}
+
+/* svg is the icon */
+.name-input svg {
+  flex: 1;
+  width: 40%;
 }
